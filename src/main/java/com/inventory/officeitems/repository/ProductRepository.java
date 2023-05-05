@@ -1,7 +1,8 @@
-package com.inventory.officeitems.controllers;
-
+package com.inventory.officeitems.repository;
 import com.inventory.officeitems.product.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 
@@ -12,3 +13,4 @@ public interface ProductRepository extends JpaRepository<Product,Integer> {
     Product findById(int id);
     String deleteById(int id);
 }
+

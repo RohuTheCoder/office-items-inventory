@@ -7,14 +7,13 @@ import jakarta.persistence.*;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-
     int row_id;
     String order_id;
     String order_date;
     String ship_date;
     String ship_mode;
-    String customer_id;
+    
+    String customerid;
 
     String customer_name;
 
@@ -31,7 +30,7 @@ public class Product {
     String region;
 
     String product_id;
-
+    
     String category;
 
     String sub_category;
@@ -58,7 +57,7 @@ public class Product {
         this.order_date = Order_Date;
         this.ship_date = Ship_Date;
         this.ship_mode = Ship_Mode;
-        this.customer_id = Customer_ID;
+        this.customerid = Customer_ID;
         this.customer_name = Customer_Name;
         this.segment = Segment;
         this.country = Country;
@@ -119,11 +118,11 @@ public class Product {
     }
 
     public String getCustomer_ID() {
-        return customer_id;
+        return customerid;
     }
 
     public void setCustomer_ID(String customer_ID) {
-        customer_id = customer_ID;
+        customerid = customer_ID;
     }
 
     public String getCustomer_Name() {

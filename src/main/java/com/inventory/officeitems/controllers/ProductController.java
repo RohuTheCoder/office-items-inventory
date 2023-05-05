@@ -1,9 +1,9 @@
 package com.inventory.officeitems.controllers;
 
 import com.inventory.officeitems.product.Product;
+import com.inventory.officeitems.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,13 +20,11 @@ public class ProductController{
         return productRepository.findAll();
     }
 
-    @GetMapping("/products/{id}")
+    @GetMapping(value = "/products/{id}")
     public Optional<Product> getProductById(@PathVariable(value="id")  int id){
         return Optional.ofNullable(productRepository.findById(id));
 
     }
-
-
 
     @PostMapping("/createProduct")
     public String createProduct(@RequestBody(required = false) Product product) {
@@ -40,7 +38,6 @@ public class ProductController{
             return ex.toString();
         }
     }
-
 
     @RequestMapping("/delete/{id}")
     public String deleteProduct(@PathVariable(value="id") int id){
