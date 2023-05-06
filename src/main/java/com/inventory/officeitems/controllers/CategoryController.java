@@ -1,9 +1,8 @@
 package com.inventory.officeitems.controllers;
 
-import java.util.ArrayList;
+
 import java.util.List;
 import java.util.stream.Collectors;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,14 +22,7 @@ public class CategoryController {
     {
 
         List<Product> categoryList = categoryRepository.findByCategory(category);
-        List<Product> sub_categoryList = new ArrayList<>();
-        for(Product p:categoryList)
-        {
-           if(p.getSub_Category().equals(sub_category))
-            {
-                 sub_categoryList.add(p);
-            }
-        }
+        List<Product> sub_categoryList = categoryList.stream().filter(p->(p!=null&&p.getSub_Category().equals(sub_category))).collect(Collectors.toList());
         return sub_categoryList;
     }
 }

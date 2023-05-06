@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication
 @Configuration
 @EnableJpaRepositories
+// @EnableWebMvc
 public class OfficeItemsApplication {
 
 	public static void main(String[] args) {
