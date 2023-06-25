@@ -11,7 +11,7 @@ In the project terminal you can run mvn spring-boot:run Runs the app in the deve
 <img src="sample images/products.png" width="450">
 <img src="sample images/products-id.png" width="450">
 <h3>2.POST Method</h3>
-<img src="sample images/create-Product.png" width="450">
+<img src="sample images/createProduct.PNG" width="450">
 <h3>3.DELETE Method</h3>
-<img src="sample images/deleteProduct.png" width="450">
+<img src="sample images/deleteProduct.PNG" width="450">
 
