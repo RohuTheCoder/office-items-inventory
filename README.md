@@ -3,7 +3,7 @@ In the project terminal you can run mvn spring-boot:run Runs the app in the deve
 <h3>Technologies and Tools</h3>
 <ul>
   <li>Spring REST</li>
-  <li>JPA</li>
+  <li>Spring Boot JPA</li>
   <li>H2 Database</li>
   <li>Postman</li>
 </ul>
